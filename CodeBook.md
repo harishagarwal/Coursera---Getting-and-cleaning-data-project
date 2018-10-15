@@ -12,10 +12,11 @@ The script run_analysis.Rperforms the 5 steps described in the course project's 
 
 # Variables
 
-* X_train, y_train, X_test, y_test, subject_train and subject_test contain the data from the downloaded files.
-* x_all, y_all and subject_all merge the previous datasets to further analysis.
-* features contains the correct names for the x_all dataset, which are applied to the column names stored in features_mean_std, a numeric vector used to extract the desired data.
-* A similar approach is taken with activity names through the activity_labels variable.
-* x_extract contains a table with the features selected
-* all_data merges x_all, y_all and subject_all in a big dataset.
-* Finally, tidy contains the relevant averages which will be later stored in a .txt file. ddply() from the plyr package is used to apply numcolwise() and ease the development.
+* xTrain, yTrain, xTest, yTest, subjectTrain and subjectTest contain the data from the downloaded files.
+* trainData, testData and finalData merge the previous datasets to further analysis.
+* finalData merges trainData, testData in a big dataset.
+* features dataset contains the correct names for the xTrain and xTest dataset
+* Columns in all other datasets are renamed based on data they contain 
+* data_mean_std contains data with column names having mean or std, along with other required variables
+* The variable names are renamed with appropriate readable names
+* Finally, tidy contains the relevant averages which will be later stored in a .txt file.
